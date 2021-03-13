@@ -1,0 +1,12 @@
+nav{
+  position: absolute;
+  top: 0;
+  background-color: #702632;
+  color: #fffffa;
+  height: 80px;
+  width: 100%;
+}
+
+nav h2{
+  margin-left: 5%;
+}

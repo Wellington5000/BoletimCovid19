@@ -1,0 +1,74 @@
+.circles{
+  width: 1200px;
+  height: 330px;
+  margin: auto;
+  display: flex;
+}
+
+.circle{
+  text-align: center;
+  margin: 1% auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 0 5px 5px 0 rgb(0, 0, 0), 0 0 0 0.1px rgb(0, 0, 0);
+}
+
+.circle h2{
+  margin-top: 37%;
+  font-size: 30px;
+}
+
+#circleInfected{
+  border: 20px solid rgb(255, 170, 170);
+  border-top-color:red; 
+}
+
+#circleCured{
+  border: 20px solid rgb(145, 250, 140);
+  border-top-color:rgb(74, 233, 66);
+}
+
+#circleDead{
+  border: 20px solid rgb(61, 61, 61);
+  border-top-color: black;
+}
+
+#circleActive{
+  border: 20px solid rgb(245, 166, 113);
+  border-top-color: rgb(226, 109, 0);
+}
+
+.label{
+  margin: 128px auto;
+  width: 1200px;
+  display: flex;
+}
+
+.label h3{
+  text-align: center;
+  margin: auto;
+  width: 200px;
+}
+
+.textCircle{
+  margin: auto;
+  width: 1200px;
+  display: flex;
+  margin-top: -220px;
+}
+
+.textCircle h2{
+  text-align: center;
+  margin: auto;
+  width: 200px;
+}
+
+@keyframes isRotating{
+  0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
