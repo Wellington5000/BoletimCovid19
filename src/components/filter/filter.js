@@ -15,7 +15,6 @@ const Filter = (props) => {
           <label htmlFor="country">País: </label>
           <select name="country" id="country">
             <option value="Brasil">Brasil</option>
-            <option value="EUA">Estados Unidos</option>
           </select>
         </div>
         <div>

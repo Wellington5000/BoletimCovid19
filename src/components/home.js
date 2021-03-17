@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 import NavBar from './navBar/navBar'
@@ -14,26 +14,31 @@ const animate = () => {
 }
 
 const Home = () => {
-  var [Data, setData] = useState([{ Recovered: 0, Deaths: 0, Confirmed: 0, Active: 0 }])
-  var [StateSelected, setStateSelected] = useState({ Recovered: 0, Deaths: 0, Confirmed: 0, Active: 0 })
+  var [Data, setData] = useState([{ Province: 'São' }])
+  var [StateSelected, setStateSelected] = useState({ Deaths: 0, Confirmed: 0, Recovered: 0, Active: 0 })
 
   const getStateSelected = (stateSelected) => {
     setStateSelected(stateSelected)
   }
   const fetchData = async () => {
-    const result = await axios.get('https://api.covid19api.com/live/country/brazil/status/confirmed', { headers: { "Access-Control-Allow-Origin": "*", "X-Access-Token": "5cf9dfd5-3449-485e-b5ae-70a60e997864" } })
-    result.data.length = 27
-    setData(result.data)
-    setStateSelected(result.data[0])
+    var ufState = 'MA'
+    var city = null
+    var updatedResults = []
+    const result = await axios.get('https://api.covid19api.com/live/country/brazil', {headers: {"Access-Control-Allow-Origin": '*'}})
+    for(let i = 1; i < 28; i++){
+      updatedResults.push(result.data[result.data.length - i])
+    }
+    setData(updatedResults)
+    setStateSelected(updatedResults[0])
     animate()
     return result
   }
+  useEffect(() => {fetchData()},[])
   return (
     <>
       <NavBar />
       <Filter setStateSelected={getStateSelected} animate={animate} data={Data} />
       <Circle data={StateSelected} />
-      <button onClick={fetchData}>BUSCAR</button>
     </>
   )
 }
