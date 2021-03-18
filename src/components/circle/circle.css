@@ -78,14 +78,13 @@
     width: 350px;
     margin-top: -35px;
     margin-left: 1%;
-
   }
 
   .circles{
     margin: auto;
     width: 350px;
     display: grid;
-    gap: 60px 10px;
+    gap: 70px 25px;
     grid-template-columns: repeat(3, 1fr);
   }
   
@@ -95,8 +94,8 @@
   }
 
   .textCircle{
-    margin-top: -273px;
-    margin-left: -2px;
+    margin-top: -280px;
+    margin-left: -5px;
     width: 350px;
     height: 330px;
     display: grid;
@@ -108,8 +107,28 @@
   .label{
     width: 360px;
     display: grid;
-    gap: 230px 0px;
+    gap: 235px 0px;
     grid-template-columns: repeat(2, 1fr);
-    margin-top: -180px;
+    margin-top: -190px;
+  }
+
+  #circleInfected{
+    border: 15px solid rgb(255, 170, 170);
+    border-top-color:red; 
+  }
+  
+  #circleCured{
+    border: 15px solid rgb(145, 250, 140);
+    border-top-color:rgb(74, 233, 66);
+  }
+  
+  #circleDead{
+    border: 15px solid rgb(61, 61, 61);
+    border-top-color: black;
+  }
+  
+  #circleActive{
+    border: 15px solid rgb(245, 166, 113);
+    border-top-color: rgb(226, 109, 0);
   }
 }
