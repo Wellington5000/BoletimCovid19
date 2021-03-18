@@ -16,3 +16,15 @@
 .filter label{
   margin-left: 50px;
 }
+
+@media (max-width: 585px){
+  .filter{
+    display: block;
+    margin: 15% auto;
+  }
+
+  .filter #country{
+    margin-left: 25px;
+    margin-bottom: 20px;
+  }
+}

@@ -2,12 +2,14 @@ import React, { useState } from 'react'
 import './filter.css'
 
 const Filter = (props) => {
+
   const onChangeStateSelected = () => {
-    var s = document.getElementById('state')
-    var indexItemSelected = s.options[s.selectedIndex].index
+    var state = document.getElementById('state')
+    var indexItemSelected = state.options[state.selectedIndex].index
     props.setStateSelected(props.data[indexItemSelected])
     props.animate()
   }
+  console.log(props.data);
   return (
     <>
       <div className='filter'>

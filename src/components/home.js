@@ -14,15 +14,14 @@ const animate = () => {
 }
 
 const Home = () => {
-  var [Data, setData] = useState([{ Province: 'São' }])
+  var [Data, setData] = useState([{}])
   var [StateSelected, setStateSelected] = useState({ Deaths: 0, Confirmed: 0, Recovered: 0, Active: 0 })
-
+  
   const getStateSelected = (stateSelected) => {
     setStateSelected(stateSelected)
   }
+
   const fetchData = async () => {
-    var ufState = 'MA'
-    var city = null
     var updatedResults = []
     const result = await axios.get('https://api.covid19api.com/live/country/brazil', {headers: {"Access-Control-Allow-Origin": '*'}})
     for(let i = 1; i < 28; i++){
