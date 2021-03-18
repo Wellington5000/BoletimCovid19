@@ -9,7 +9,6 @@ const Filter = (props) => {
     props.setStateSelected(props.data[indexItemSelected])
     props.animate()
   }
-  console.log(props.data);
   return (
     <>
       <div className='filter'>

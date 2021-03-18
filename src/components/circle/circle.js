@@ -4,7 +4,7 @@ import './circle.css'
 
 const Circle = (props) => {
   return (
-    <>
+    <div className='info'>
       <div className='circles'>
         <div id='circleInfected' className='circle'></div>
         <div id='circleDead' className='circle'></div>
@@ -26,7 +26,7 @@ const Circle = (props) => {
         <h3>RECUPERADOS</h3>
         <h3>ATIVOS</h3>
       </div>
-    </>
+    </div>
   )
 }
 
