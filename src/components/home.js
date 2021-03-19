@@ -24,7 +24,7 @@ const Home = () => {
   const fetchData = async () => {
     var updatedResults = []
     const result = await axios.get('https://api.covid19api.com/live/country/brazil', {headers: {"Access-Control-Allow-Origin": '*'}})
-    for(let i = 1; i < 28; i++){
+    for(let i = 1; i < 27; i++){
       updatedResults.push(result.data[result.data.length - i])
     }
     setData(updatedResults)

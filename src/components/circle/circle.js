@@ -8,7 +8,6 @@ const Circle = (props) => {
       <div className='circles'>
         <div id='circleInfected' className='circle'></div>
         <div id='circleDead' className='circle'></div>
-        <br/>
         <div id='circleCured' className='circle'></div>
         <div id='circleActive' className='circle'></div>
       </div>

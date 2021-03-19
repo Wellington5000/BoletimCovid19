@@ -76,59 +76,62 @@
 @media (max-width: 858px){
   .info{
     width: 350px;
-    margin-top: -35px;
-    margin-left: 1%;
+    height: 330px;
+    margin: -5% auto;
   }
 
   .circles{
-    margin: auto;
-    width: 350px;
-    display: grid;
-    gap: 70px 25px;
-    grid-template-columns: repeat(3, 1fr);
-  }
-  
-  .circle{
-    width: 150px;
-    height: 150px;
-  }
-
-  .textCircle{
-    margin-top: -280px;
-    margin-left: -5px;
     width: 350px;
     height: 330px;
     display: grid;
-    gap: 180px 0px;
+    gap: 70px 55px;
     grid-template-columns: repeat(2, 1fr);
-    
+  }
+  
+  .circle{
+    width: 100px;
+    height: 100px;
+  }
+
+  .textCircle{
+    font-size: 10px;
+    margin-left: -23px;
+    margin-top: -332px;
+    width: 350px;
+    height: 330px;
+    display: grid;
+    gap: 70px 0px;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .label{
-    width: 360px;
+    margin-left: -23px;
+    margin-top: -250px;
+    width: 350px;
+    height: 330px;
     display: grid;
-    gap: 235px 0px;
+    gap: 70px 0px;
     grid-template-columns: repeat(2, 1fr);
-    margin-top: -190px;
+    font-size: 12px;
   }
 
   #circleInfected{
-    border: 15px solid rgb(255, 170, 170);
+    border: 12px solid rgb(255, 170, 170);
     border-top-color:red; 
   }
   
   #circleCured{
-    border: 15px solid rgb(145, 250, 140);
+    border: 12px solid rgb(145, 250, 140);
     border-top-color:rgb(74, 233, 66);
   }
   
   #circleDead{
-    border: 15px solid rgb(61, 61, 61);
+    border: 12px solid rgb(61, 61, 61);
     border-top-color: black;
   }
   
   #circleActive{
-    border: 15px solid rgb(245, 166, 113);
+    border: 12px solid rgb(245, 166, 113);
     border-top-color: rgb(226, 109, 0);
   }
 }
